@@ -13,7 +13,7 @@ namespace RimHUD.Engine
 
     public static Pawn? SelectedPawn => Find.Selector?.SingleSelectedThing as Pawn;
 
-    private static bool ShowPane => Active && !WorldRendererUtility.WorldRenderedNow && SelectedPawn is not null;
+    private static bool ShowPane => Active && !WorldRendererUtility.WorldRendered && SelectedPawn is not null;
 
     public static bool ModifyPane => ShowPane && Theme.InspectPaneTabModify.Value;
     public static bool CompressLetters => Active && !Theme.DockedMode.Value && Theme.LetterCompress.Value;
